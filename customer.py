@@ -1,9 +1,4 @@
-from cans import Can
-from soda_machine import SodaMachine
-from coins import Coin
-from backpack import BackPack
 from wallet import Wallet
-from simulation import Simulation
 
 
 class Customer:
