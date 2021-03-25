@@ -2,7 +2,7 @@ from cans import Can
 from customer import Customer
 from coins import Coin
 from wallet import Wallet
-
+import user_interface
 
 class SodaMachine:
     def __init__(self):
@@ -53,7 +53,7 @@ class SodaMachine:
             change_value = self.determine_change_value(total_payment_value, selected_soda.price)
             customer_change = self.gather_change_from_register(change_value)
             if customer_change is None:
-                user_interface.output_text('Dispensing ${total_payment_value} back to customer')
+                user_interface.output_text(f'print Dispensing ${total_payment_value} back to customer')
                 customer.add_coins_to_wallet(customer_payment)
                 self.return_inventory()
             else:
