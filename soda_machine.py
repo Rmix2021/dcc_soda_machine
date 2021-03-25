@@ -132,7 +132,7 @@ class SodaMachine:
         """Re-adds a remove can back to inventory upon unsuccessful purchase attempt"""
         self.inventory.append(chosen_soda)
 
-    def deposit_coins_into_register(self, coin_list):
+    def deposit_coins_into_register(self, coins_list):
         """Takes in list of coins as argument, adds each coin from list to the register"""
         for coin.name in coins_list:
             self.register.append(coins_list)
