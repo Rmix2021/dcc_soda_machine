@@ -98,15 +98,15 @@ class SodaMachine:
     def get_coin_from_register(self, coin_name):
         """Removes and returns a coin from register"""
         for coin in self.register:
-            if coin.name == "coin_name":
+            if coin_name == "coin_name":
                 self.register.remove(coin)
                 return coin
         return None
 
     def register_has_coin(self, coin_name):
         """Searches register for a type of coin, returns True if coin is found"""
-        for coin in self.register:
-            if coin.name == "coin_name":
+        for coin.name in self.register:
+            if coin_name == "coin_name":
                 return True
         return False
 
@@ -134,5 +134,5 @@ class SodaMachine:
 
     def deposit_coins_into_register(self, coin_list):
         """Takes in list of coins as argument, adds each coin from list to the register"""
-        for coin in coins_list:
+        for coin.name in coins_list:
             self.register.append(coins_list)
