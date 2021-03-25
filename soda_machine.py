@@ -37,7 +37,7 @@ class SodaMachine:
 
         selected_soda = self.get_inventory_soda(selected_soda_name)
 
-        customer_payment = customer.gather_coins_from_wallet(selected_soda_name)
+        customer_payment = customer.gather_coins_from_wallet(selected_soda)
 
         self.calculate_transaction(customer_payment, selected_soda_name, customer)
 
@@ -51,7 +51,7 @@ class SodaMachine:
             if customer_change is None:
                 user_interface.output_text('Dispensing ${total_payment_value} back to customer')
                 customer.add_coins_to_wallet(customer_payment)
-                self.return_inventory(selected_soda)
+                self.return_inventory()
             else:
                 self.deposit_coins_into_register(customer_payment)
                 customer.add_coins_to_wallet(customer_change)
@@ -64,7 +64,7 @@ class SodaMachine:
         else:
             user_interface.output_text("You do not have enough money to purchase this item, returning payment")
             customer.add_coins_to_wallet(customer_payment)
-            self.return_inventory(selected_soda)
+            self.return_inventory()
 
     def gather_change_from_register(self, change_value)
         change_list = []
@@ -124,7 +124,7 @@ class SodaMachine:
                 return can
         return None
 
-    def return_inventory(chosen_soda):
+    def return_inventory(self):
         """Re-adds a remove can back to inventory upon unsuccessful purchase attempt"""
         self.inventory.append(chosen_soda)
 

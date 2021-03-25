@@ -1,5 +1,8 @@
 import os
-
+from cans import Can
+from customer import Customer
+from soda_machine import SodaMachine
+from coins import Coin
 
 def simulation_main_menu():
     """Main menu prompting user to choose an option"""
@@ -75,7 +78,7 @@ def soda_selection(inventory):
         i = 1
         for can in soda_options:
             print("\n\tEnter -{i}- for {can} : ${can.price}")
-            i++
+            i+=
         user_selection = try_parse_int(input("Selection:"))
         validated_user_selection = validate_coin_choice(user_selection, soda_options)
     return validated_user_selection[1]
