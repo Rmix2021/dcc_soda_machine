@@ -3,6 +3,10 @@ from cans import Can
 from customer import Customer
 from soda_machine import SodaMachine
 from coins import Coin
+from backpack import BackPack
+from wallet import Wallet
+from simulation import Simulation
+
 
 def simulation_main_menu():
     """Main menu prompting user to choose an option"""

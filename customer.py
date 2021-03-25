@@ -1,7 +1,10 @@
-from wallet import Wallet
-from backpack import Backpack
-from user_interface import UserInterface
 from cans import Can
+from soda_machine import SodaMachine
+from coins import Coin
+from backpack import BackPack
+from wallet import Wallet
+from simulation import Simulation
+
 
 class Customer:
     def __init__(self):
