@@ -1,5 +1,5 @@
 from wallet import Wallet
-
+from backpack import Backpack
 
 class Customer:
     def __init__(self):
