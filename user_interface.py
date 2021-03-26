@@ -130,7 +130,7 @@ def display_payment_value(customer_payment):
 
 def coin_selection():
     """Prompts user to choose which coins to deposit and passes their selection in validate_coin_selection"""
-    validated_user_selection = (False, None)
+    validated_user_selection = (True, None)
     while validated_user_selection[0] is False:
         print("\n\tEnter -Q- for Quarter")
         print("\tEnter -D- for Dime")
