@@ -116,7 +116,7 @@ def get_unique_can_names(inventory):
 
 def display_can_cost(selected_can):
     """Displays the name of a can and its price"""
-    print(f'The price of a {selected_can.price} is ${selected_can.price}')
+    print(f'The price of a {selected_can} is ${selected_can}')
 
 
 def display_payment_value(customer_payment):
