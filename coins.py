@@ -3,7 +3,6 @@ class Coin:
         self.value = value
         self.name = name
 
-
 class Dime(Coin):
     def __init__(self):
         super(Dime, self).__init__("Dime", 0.10)
@@ -21,4 +20,4 @@ class Penny(Coin):
 
 class Quarter(Coin):
     def __init__(self):
-        super(Quarter, self).__init__("Quarter", 0.25)
+        super(Quarter,self).__init__("Quarter", 0.25)

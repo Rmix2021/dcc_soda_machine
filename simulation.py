@@ -1,6 +1,6 @@
 from customer import Customer
-from wallet import Wallet
-from backpack import Backpack
+import wallet
+import backpack
 from soda_machine import SodaMachine
 import user_interface
 
@@ -13,6 +13,8 @@ class Simulation:
         """The central method called in main.py."""
         customer = Customer()
         soda_machine = SodaMachine()
+        soda_machine.fill_register()
+        soda_machine.fill_inventory()
         will_proceed = True
         while will_proceed:
             user_option = user_interface.simulation_main_menu()

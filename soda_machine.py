@@ -1,7 +1,7 @@
-from cans import Can
-from customer import Customer
-from coins import Coin
-from wallet import Wallet
+import cans
+import customer
+import coins
+import wallet
 import user_interface
 
 class SodaMachine:
@@ -43,7 +43,7 @@ class SodaMachine:
 
         customer_payment = customer.gather_coins_from_wallet(selected_soda)
 
-        self.calculate_transaction(customer_payment, selected_soda_name, customer)
+        self.calculate_transaction(customer_payment, selected_soda, customer)
 
         user_interface.output_text("Transaction complete")
 
@@ -116,6 +116,7 @@ class SodaMachine:
 
     def calculate_coin_value(self, coin_list):
         """Takes in a list of coins, returns the monetary value of list."""
+        total_value = 0
         for coin in coin_list:
             total_value += coin.value
         return round(total_value, 2)

@@ -1,9 +1,8 @@
 import os
 from cans import Can
-from customer import Customer
 from coins import Coin
 from wallet import Wallet
-
+import soda_machine
 
 def simulation_main_menu():
     """Main menu prompting user to choose an option"""
@@ -52,7 +51,7 @@ def display_welcome():
 
 def output_text():
     """User input method that will print to console any string passed in as an argument"""
-    print("text")
+    print("Continue to add coins until you are ready to insert them into the machine")
 
 
 def clear_console():
@@ -78,7 +77,7 @@ def soda_selection(inventory):
         print("Please choose from the following options:")
         i = 1
         for can in soda_options:
-            print(f"\n\tEnter -{i}- for {can} : ${can.price}")
+            print(f"\n\tEnter -{i}- for {can.name} : ${can.price}")
             i+= 1
         user_selection = try_parse_int(input("Selection:"))
         validated_user_selection = validate_coin_choice(user_selection, soda_options)
